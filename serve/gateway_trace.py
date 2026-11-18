@@ -32,7 +32,7 @@ app = FastAPI(
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
-yolo = YOLO("yolov8n.pt")
+yolo = YOLO("../yolov8n.pt")
 
 net = yolo.model.to(device).eval()
 

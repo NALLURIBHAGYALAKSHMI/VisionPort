@@ -7,7 +7,7 @@ from ultralytics import YOLO
 app = FastAPI(title="VisionPort Gateway (Session 2 prototype)")
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
-model = YOLO("yolo12n.pt")  # loaded once at start-up, not per request
+model = YOLO("../yolo12n.pt")  # loaded once at start-up, not per request
 
 
 @app.get("/")
